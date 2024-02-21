@@ -1,0 +1,20 @@
+import random
+while True:
+    first=input("Rock, Paper, Scissor!: ")
+    print("")
+    options=["Rock","Paper","Scissor"]
+    second=random.choice(options)
+    print("You:", first)
+    print("")
+    print("Second player:", second)
+    print("")
+    if first not in options:
+        print("Please use Rock, Paper or Scissor with capital letters!")
+    if first==second:
+        print("Draw!")
+    if (first=="Rock" and second=="Scissor") or (first=="Paper" and second=="Scissor") or (first=="Scissor" or second=="Rock"):
+        print("You win!")
+        break
+    if (second=="Rock" and first=="Scissor") or (second=="Paper" and first=="Scissor") or (second=="Scissor" or first=="Rock"):
+        print("Second user win!")
+        break
